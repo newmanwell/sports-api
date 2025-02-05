@@ -5,7 +5,7 @@ const  App =() => {
 
   return (
     <>
-      <h1>Something Sporty</h1>
+      <h1>Premier League DB</h1>
       <SportList />
     </>
   )

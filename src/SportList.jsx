@@ -17,7 +17,7 @@ const SportList = () => {
   }, []);
   return (
   allTeams.map((team) => {
-    return <li key={team.idTeam}>{team.strTeam}</li>
+    return <img key={team.idTeam} src={team.strLogo} />
   })
   )
 }
