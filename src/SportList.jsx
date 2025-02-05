@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const SportList = () => {
+const SportList = (props) => {
   const [allTeams, setAllTeams] = useState([]);
   useEffect(() => {
     const getPremier = async() => {
@@ -15,9 +15,15 @@ const SportList = () => {
     }
     getPremier();
   }, []);
+
+  const clickedTeam = () => {
+    // {props.setOneTeamDetails(team)}
+    console.log("hello");
+  }
+
   return (
   allTeams.map((team) => {
-    return <img key={team.idTeam} src={team.strLogo} />
+    return <img key={team.idTeam} src={team.strLogo} alt={team.strTeam} onClick={() => {props.setOneTeamDetails(team)}}/>
   })
   )
 }
