@@ -15,12 +15,7 @@ const SportList = (props) => {
     }
     getPremier();
   }, []);
-
-  const clickedTeam = () => {
-    // {props.setOneTeamDetails(team)}
-    console.log("hello");
-  }
-
+  
   return (
   allTeams.map((team) => {
     return <img key={team.idTeam} src={team.strLogo} alt={team.strTeam} onClick={() => {props.setOneTeamDetails(team)}}/>

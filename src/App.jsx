@@ -10,7 +10,7 @@ const  App =() => {
       <h1>Premier League DB</h1>
       {console.log(oneTeamDetails)}
       {
-        oneTeamDetails.id ? <TeamDetails /> : <SportList setOneTeamDetails={setOneTeamDetails}/>
+        oneTeamDetails.idTeam ? <TeamDetails /> : <SportList setOneTeamDetails={setOneTeamDetails}/>
       }
       
     </>
