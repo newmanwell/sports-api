@@ -25,6 +25,12 @@ const TeamDetails = () => {
   <section>
     <h2>Team Page</h2>
     <h2>{ team.strTeam }</h2>
+    <h2>Location: { team.strLocation } { team.strCountry }</h2>
+    <h3>Stadium: { team.strStadium }</h3>
+    <h3>{ team.strKeywords}</h3>
+    <img src={team.strBadge } alt="Badge" />
+    <img src={team.strEquipment } alt="Kit" />
+    <img src={team.strFanart1} alt="Fan Art" />
   </section>
   
   )
