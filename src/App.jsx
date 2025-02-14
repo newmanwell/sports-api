@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link, Routes, Route } from "react-router-dom";
 import SportList from "./SportList"
 import TeamDetails from "./TeamDetails"
 
@@ -7,12 +8,19 @@ const  App =() => {
 
   return (
     <>
-      <h1>Premier League DB</h1>
-      {console.log(oneTeamDetails)}
-      {
-        oneTeamDetails.idTeam ? <TeamDetails /> : <SportList setOneTeamDetails={setOneTeamDetails}/>
-      }
-      
+      <header>
+        <h1>Premier League DB</h1>
+        <nav>
+          <Link to="/">All Teams</Link>
+        </nav>
+      </header>
+      <div>
+        <Routes>
+          <Route path="/" element={<SportList />} />
+          <Route path="/teamdetails/:id" element={<TeamDetails />} />
+        </Routes>
+      </div>
+     
     </>
   )
 }
