@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SportList = () => {
   const [allTeams, setAllTeams] = useState([]);
@@ -15,9 +16,14 @@ const SportList = () => {
     }
     getPremier();
   }, []);
+  
   return (
   allTeams.map((team) => {
-    return <img key={team.idTeam} src={team.strLogo} />
+    return (
+      <Link to={`/teamdetails/${team.strTeam}`} key={team.idTeam}>
+        <img  src={team.strLogo} alt={team.strTeam} />
+      </Link>
+    )
   })
   )
 }
