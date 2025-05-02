@@ -18,13 +18,17 @@ const SportList = () => {
   }, []);
   
   return (
-  allTeams.map((team) => {
-    return (
-      <Link to={`/teamdetails/${team.strTeam}`} key={team.idTeam}>
-        <img  src={team.strLogo} alt={team.strTeam} />
-      </Link>
-    )
-  })
+    <main className="all-teams-page">
+      {
+        allTeams.map((team) => {
+          return (
+            <Link to={`/teamdetails/${team.strTeam}`} key={team.idTeam}>
+              <img src={team.strLogo} alt={team.strTeam} className="all-teams-logo"/>
+            </Link>
+          )
+        })
+      }
+    </main>
   )
 }
 

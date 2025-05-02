@@ -6,6 +6,30 @@ h1 {
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 24px;
+  color: lightblue;
+}
+
+nav a:hover {
+  color: blueviolet;
+}
+
+.all-teams-page {
+  display: grid;
+  column-gap: 4px;
+  row-gap: 4px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
 img {
   height: 200px;
   width: 200px;
@@ -14,3 +38,9 @@ img {
   background-color: lightgrey;
   border-radius: 8px;
 }
+
+.all-teams-logo:hover {
+  transform: scale(1.5);
+  transition-duration: 500ms;
+}
+
